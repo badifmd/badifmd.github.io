@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Gerador QR</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
     </head>
 
     <body>
@@ -19,7 +19,12 @@
                     Project_QR
                 </h1> 
                 
-                <textarea maxlength="256" rows="3" id="conteudoQRCode"></textarea>
+                <label for="input-filename">Nome do Arquivo:</label><br/>
+                <input type="text" id="titulo" placeholder="Nome do Arquivo"><br/>
+                
+                <label for="text">Texto:</label><br/>
+                <textarea id="text" placeholder="Digite o conteúdo para gerar o QR Code" maxlength="256" rows="3" id="conteudoQRCode"></textarea>
+                
                 <br/>
                 <button type="button">
                     Gerar QR Code
@@ -28,8 +33,15 @@
                 <br/><br/>
                 
                 <img id="imageQRCode" src="images/instructions.png">
+
+                <br/>
+
+                <button onclick="salvar()">
+                    Baixar QR Code
+                </button>
+
                 
-                <script type="text/javascript" src="js/script.js"></script>    
+                <script type="text/javascript" src="js/script.js"></script>    <!--testar colocando essa chamada de script no final do body-->
             </div>
 
             <div id="footer">
@@ -37,5 +49,16 @@
             </div>
             		            
         </div>
+
+        <script type="text/javascript" src="js/FileSaver.min.js"></script>
+
+        <script>
+            function salvar() {
+                title = "you_qr"
+                let content = document.getElementById("imageQRCode").value;
+                let blob = new Blob([content], { type: Image });
+                saveAs(blob, title + ".png");
+            }
+        </script>
     </body>
 </html>
