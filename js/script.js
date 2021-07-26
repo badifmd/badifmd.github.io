@@ -6,20 +6,15 @@ $('button').click(function()
   $('#imageQRCode').attr('src', imagemQRCode);
 });	
 
-let title = document.getElementById('#title');
 let btnDownload = document.querySelector('#download');
 let img = document.querySelector('#imageQRCode');
 
 btnDownload.addEventListener('click', () => {
   let imgPath = img.getAttribute('src');
-  let fileName = title+'.png';
+  let fileName = 'your_qr.png';
 
   saveAs(imgPath, fileName);
 });
-
-function getFileName(str){
-  return str.substring(str.lastIndexOf('/')+1);
-}
 
 /* (caso der problema no download do QR apagar a variável local title
   e em filename substituir para 'your_qr.png') */

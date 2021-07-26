@@ -12,7 +12,6 @@ html, body {
     margin: 0 auto 0 auto;
     border: black;
     height: 100%;
-    width: 100%;
 }
 
 #header{
@@ -23,17 +22,74 @@ html, body {
     background: black;
 }
 
+#content {
+    align-items: center;
+    width: 70%;
+    min-width: 50px; /**/
+    height: 20px;
+    border-color: #000000;
+    border-width: 5px;
+    border-radius: 20px;
+    resize: none;
+}
+
+textarea:invalid {
+    border: 10px solid red;
+}
+
 #footer{
-    height: 100%;
+    padding: auto 10 auto 10;
+    height: 150;
+    color: #FFFFFF;
     background: black;
+    font-family: Trebuchet MS;
+    text-align: right;
 }
 
 p{
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-family: Trebuchet MS;
 }
 
 textarea{
     width: 100%;
     min-width: 250px;
 }
+
+button {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #FFFFFF;
+    font-family: Trebuchet MS;
+    font-size: 20px;
+    font-weight: 900;
+    padding: 12px;
+    background-color: #000000;
+    -webkit-box-shadow: 1px 1px 6px 0 #000000;
+    -moz-box-shadow: 1px 1px 6px 0 #000000;
+    box-shadow: 1px 1px 6px 0 #000000;
+    text-shadow: 1px 1px 6px #000000;
+    border: solid #762C2C 0;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+ }
+ 
+ button:hover {
+    background: #484848;
+    border: outset #FFFFFF 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    text-decoration: none;
+    text-transform: uppercase;
+ }
+
+ h1, h2, label {
+     font-weight: bolder;
+     color: #000000;
+     font-family: Trebuchet MS;
+ }
