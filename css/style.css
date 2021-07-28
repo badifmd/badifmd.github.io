@@ -33,8 +33,26 @@ html, body {
     resize: none;
 }
 
+#content:focus{
+    border-color:darkmagenta;
+    border-width: 5px;
+    border-radius: 20px;
+    box-shadow: 0 0 0 0;
+    outline: 0;
+}
+
 textarea:invalid {
     border: 10px solid red;
+}
+
+p{
+    color: black;
+    font-family: Trebuchet MS;
+}
+
+#ft {
+    color: white;
+    font-family: Trebuchet MS;
 }
 
 #footer{
@@ -44,11 +62,6 @@ textarea:invalid {
     background: black;
     font-family: Trebuchet MS;
     text-align: right;
-}
-
-p{
-    color: black;
-    font-family: Trebuchet MS;
 }
 
 textarea{
@@ -86,6 +99,10 @@ button {
     border-radius: 0;
     text-decoration: none;
     text-transform: uppercase;
+ }
+
+ button:active {
+     background:#b83dba;
  }
 
  h1, h2, label {

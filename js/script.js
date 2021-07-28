@@ -16,5 +16,35 @@ btnDownload.addEventListener('click', () => {
   saveAs(imgPath, fileName);
 });
 
-/* (caso der problema no download do QR apagar a variável local title
-  e em filename substituir para 'your_qr.png') */
+document.addEventListener("keypress", function(e) {
+  if (e.key === 'Enter') {
+    var btn = document.querySelector("#gera");
+    btn.click();
+    e.preventDefault();
+  }
+})
+
+
+/* if (code == 13) {
+  var post = $('.status-box').val();
+  if (post.length > 0) {
+    $('<li>').text(post).prependTo('.posts');
+    $('#content').val('');
+    $('.counter').text('500');
+    $('.btn').addClass('disabled');
+    $(this).parents('form').find('.btn').trigger('click');
+  }
+} */
+
+/* <!-- postando ao pressionar enter -->
+  $('.status-box').keypress(function(e){
+    var code = (e.keyCode ? e.keyCode : e.which);
+    if(code == 13) { 
+      var post = $('.status-box').val();
+      $('<li>').text(post).prependTo('.posts');
+      $('.status-box').val('');
+      $('.counter').text('500');
+      $('.btn').addClass('disabled');
+      $(this).parents('form').find('.btn').trigger('click');
+    }
+  }); */
