@@ -24,7 +24,7 @@ html, body {
 
 #content {
     align-items: center;
-    width: 70%;
+    width: 80%;
     min-width: 50px; /**/
     height: 20px;
     border-color: #000000;
@@ -37,12 +37,16 @@ html, body {
     border-color:darkmagenta;
     border-width: 5px;
     border-radius: 20px;
-    box-shadow: 0 0 0 0;
+    box-shadow: 50 50 50 50;
     outline: 0;
 }
 
 textarea:invalid {
     border: 10px solid red;
+}
+
+#imageQRCode {
+    width: 40%;
 }
 
 p{
